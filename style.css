@@ -1,0 +1,21 @@
+body {
+    background-color: skyblue;
+}
+h1 {
+
+color:rgb(212, 23, 212);
+text-align:center;
+font-size:40px;
+font-style: italic;
+}
+
+footer {
+    background-color: forestgreen;
+}
+
+button {
+    background-color:black;
+    color:hotpink;
+
+  
+}
