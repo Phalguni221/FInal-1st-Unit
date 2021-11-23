@@ -1,3 +1,6 @@
 # Final-1st-Unit Game Project
 
 My game is called "Cupcake Fantasy". It requires a single playable character to move around the screen in order to collect cupcakes that fall from the sky at random locations. THe charatcer has to collect at least 15 cupcakes in a matter of 2 minutes or the character loses the game. Players can also compete against each other to see who scores the highest and if they can collect more than the required minimum amount of cupcakes. Players also have a chance to immediately play the game again once it ends.
+
+The goal is to collect as many cupcakes as possible to save the player's bakery. The player was delivering goods around the neighborshood one day when it suddenyly started raining cupcakes!! The bakery owner decided that this is a good way to make money and save the bakery!! However, the player is required to perfectly catch at least 50 cupcakes withoutt letting them fall to the ground. The cupcakes will all be sold to the spoiled and rich Remo Git , who is celebrating his 18th birthday!! If the player catch all 50 and delivers them to the birthday party happening in front of the mansion on time, then enough money can be made to save the bakery! If players choose to catch all 50 in a row within 2 minutes, then the game will end and the task is not completed.  
+
