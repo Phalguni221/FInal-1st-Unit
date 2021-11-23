@@ -1,5 +1,9 @@
+head {
+    text-align:center;
+}
 body {
     background-color: skyblue;
+    border:"Cupcake border.png"
 }
 h1 {
 
@@ -9,6 +13,12 @@ font-size:40px;
 font-style: italic;
 }
 
+h3 {
+    background-color:black;
+    color:pink;
+    text-align: center;
+}
+
 footer {
     background-color: forestgreen;
 }
@@ -16,6 +26,11 @@ footer {
 button {
     background-color:black;
     color:hotpink;
-
-  
 }
+
+img {
+    height:200px;
+    width:150px;
+}
+
+
