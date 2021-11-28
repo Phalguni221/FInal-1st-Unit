@@ -1,28 +1,8 @@
-// let modifier = 5;
-// document.addEventListener('keydown', (event)=> {
-//     const {style} = document.querySelector(".PrincessPeach");
-//         if(event.repeat) return;
-
-//     if(event.key === 'ArrowLeft'){
-//         direction = 'west'
-//     }
-//     if(event.key === 'ArrowUp'){
-//         direction = 'north'
-//     }
-//     if(event.key === 'ArrowRight'){
-//         direction = 'east'
-//     }
-//     if(event.key === 'ArrowDown'){
-//         direction = 'south'
-//     }
-//     callback(direction)
-// })
-//     if(event.repeat) return;
 
     let modifier = 50;
     document.addEventListener('keydown', (event)=> {
     let princess = document.querySelector(".PrincessPeach");
-    let cloud = 50;
+    let cloud = 0
 
     princess.style.left = "0px"
     princess.style.top = "0px"
@@ -37,8 +17,15 @@
 });
 
 const grid = document.querySelector('.grid')
+let currentCollectorIndex = 50
+let width = 15
+let height= 30
 
-for(let i = 0; i < 12; i++) {
+let direction =1
+let cupcakesId = 1
+
+
+for(let i = 0; i < 60; i++) {
     const square = document.createElement('div')
     grid.appendChild(square)
 }
@@ -46,13 +33,63 @@ for(let i = 0; i < 12; i++) {
 const squares = Array.from(document.querySelectorAll('.grid div'))
 
 const cupcakes = [
-    1,2,3,4,
-    9,10,11,12
+    1,2,3,4,5,6,7,8,9,10,
+    11,12,13,14,15,16,17,18,19,20,
+    21,22,23,24,25,26,27,28,29,30,
+    31,32,33
 ]
 
 function draw () {
     for (let i = 0; i<cupcakes.length; i++) {
-        squares[cupcakes[i]].classList.add('.cupcake')
+        squares[cupcakes[i]].classList.add('cupcake')
     }
 }
 
+draw()
+
+function remove () {
+    for (let i = 0; i<cupcakes.length; i++) {
+        squares[cupcakes[i]].classList.remove('cupcake')
+    }
+}
+
+squares[currentCollectorIndex].classList.add('picture')
+
+function moveCollector(e) {
+    squares[currentCollectorIndex].classList.remove('picture')
+    switch(e.key) {
+        case "ArrowUp": if (parseInt(currentCollectorIndex)-modifier) currentCollectorIndex +=1
+        break
+         case "ArrowDown":if (currentCollectorIndex % height < height-1) currentCollectorIndex -=1
+         break
+        case "ArrowLeft": if (currentCollectorIndex % width !==0) currentCollectorIndex -=1
+        break
+        case "ArrowRight": if (currentCollectorIndex % width < width-1) currentCollectorIndex +=1
+        break
+}
+squares[currentCollectorIndex].classList.remove('picture')
+}
+
+document.addEventListener('keydown', moveCollector)
+
+
+
+function moveCupcakes() {
+    const leftEdge = cupcakes[0] % width === 0
+    const rightEdge = cupcakes[cupcakes.length - 1] % width === width-1
+    remove()
+}
+
+if (rightEdge) {
+    for (let i=0; i < cupcakes.length; i++) {
+        cupcakes[i] += width -1
+        direction = -1
+    }
+}
+
+for (let i=0; i < cupcakes.length; i++) {
+    cupcakes[i] += direction
+}
+draw()
+
+cupcakesId = setInterval(moveCupcakes, 500)
