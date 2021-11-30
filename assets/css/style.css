@@ -2,7 +2,7 @@ head {
     text-align:center;
 }
 body {
-    min-height:10vh;
+    min-height:80vh;
     background:linear-gradient(to top, rgb(64, 161, 199), skyblue, white);  
 }
 
@@ -14,30 +14,28 @@ body {
     flex-wrap:wrap;
 }
 
+.squares {
+    height:100px;
+    width:100px;
+}
+
 .grid div {
     height:100px;
     width:100px;
     image-orientation: inherit;
-}
-
-.cupcake {
     background-color:pink;
     border-radius:50px;
     border-color:black;
 }
 
 .picture {
+    height:75px;
+    width:75px;
     background-color:pink;
     border-radius:50px;
     border-color:black;
 }
 
-
-.blankimage {
-    height:330px;
-    width:100px;
-    background-color:skyblue;
-}
 
 h1 {
 
@@ -49,12 +47,14 @@ font-style: italic;
 
 h2 {
     text-align:center;
+    font-size:35px;
 }
 
 h3 {
     background-color:black;
     color:pink;
     text-align: center;
+
 }
 
 h4 {
@@ -64,8 +64,7 @@ h4 {
 
 footer {
     background-color: forestgreen;
-    min-height:10vh;
-    border-radius:50px;
+    height:20vh;
 }
 
 button {
