@@ -2,23 +2,41 @@ head {
     text-align:center;
 }
 body {
-    background-color: skyblue;
-    border:"Cupcake border.png"
+    min-height:10vh;
+    background:linear-gradient(to top, rgb(64, 161, 199), skyblue, white);  
 }
 
 .grid {
-    height:1000px;
-    width:1000px;
+    height:fit-content;
+    width:fit-content;
     border:black 1px;
     display: flex;
     flex-wrap:wrap;
 }
 
 .grid div {
-    height:900px;
-    width:900px;
-    background-image:
-    url("https://i.pinimg.com/550x/d3/0e/5a/d30e5aff6181a2e660844f2b0895bd80.jpg")
+    height:100px;
+    width:100px;
+    image-orientation: inherit;
+}
+
+.cupcake {
+    background-color:pink;
+    border-radius:50px;
+    border-color:black;
+}
+
+.picture {
+    background-color:pink;
+    border-radius:50px;
+    border-color:black;
+}
+
+
+.blankimage {
+    height:330px;
+    width:100px;
+    background-color:skyblue;
 }
 
 h1 {
@@ -29,14 +47,25 @@ font-size:40px;
 font-style: italic;
 }
 
+h2 {
+    text-align:center;
+}
+
 h3 {
     background-color:black;
     color:pink;
     text-align: center;
 }
 
+h4 {
+    color:black;
+    font-size: 16px;
+}
+
 footer {
     background-color: forestgreen;
+    min-height:10vh;
+    border-radius:50px;
 }
 
 button {
@@ -49,24 +78,12 @@ img {
     width:150px;
 }
 
-.PrincessPeach {
-    height:200px;
-    width:150px;
-    position:relative;
-}
 
 .CuteCloud {
     width:300px;
-    height:-60px;
-    image-orientation:center;
+    height:200px;
 }
 
-.grass {
-    height:500px;
-    width:300px;
-    
-    color:forestgreen;
 
-}
 
 
