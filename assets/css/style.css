@@ -2,8 +2,8 @@ head {
     text-align:center;
 }
 body {
-    background-color: skyblue;
-    border:"Cupcake border.png"
+    min-height:10vh;
+    background:linear-gradient(to top, rgb(64, 161, 199), skyblue, white);  
 }
 
 .grid {
@@ -64,6 +64,8 @@ h4 {
 
 footer {
     background-color: forestgreen;
+    min-height:10vh;
+    border-radius:50px;
 }
 
 button {
@@ -82,9 +84,6 @@ img {
     height:200px;
 }
 
-.grass {
-    color:forestgreen;
-    border-radius:50px;
-}
+
 
 
