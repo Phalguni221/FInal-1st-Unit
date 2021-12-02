@@ -1,0 +1,122 @@
+head {
+    text-align:center;
+}
+
+@keyframes bgcolor {
+    0% {
+     background:linear-gradient(to top, rgb(64, 161, 199), skyblue, white);  
+    }
+
+    20% {
+        background:linear-gradient(to top, rgb(64, 161, 199), skyblue, white);  
+       }
+
+    40% {
+        background:linear-gradient(to top, rgb(117, 187, 214),rgb(119, 195, 224)e, white); 
+    }
+
+    60% {
+        background:linear-gradient(to top, rgb(83, 151, 179), rgb(38, 111, 139), rgb(141, 95, 179)); 
+    }
+
+    80% {
+        background:linear-gradient(to top, rgb(94, 96, 221), darkblue, purple);
+    }
+
+    100% {
+    background:linear-gradient(to top, rgb(94, 96, 221), darkblue, purple);  
+    }
+}
+
+body {
+    min-height:100vh;
+    text-align:center;
+        -webkit-animation: bgcolor 20s infinite;
+        animation: bgcolor 40s infinite;
+        -webkit-animation-direction: alternate;
+        animation-direction: alternate;
+    }
+
+
+.grid {
+    height:fit-content;
+    width: fit-content;
+    display:flex;
+    flex-wrap:wrap;
+
+}
+
+.grid div {
+    height:50px;
+    width:50px;
+    background-color:pink;
+    border-radius:50px;
+    border-color:black;
+}
+
+ /* .canvas {
+    height:fit-content;
+    width: fit-content;
+    display:flex;
+    flex-wrap:wrap;
+} 
+
+.canvas div {
+    height:50px;
+    width:50px;
+    background-color:pink;
+    border-radius:50px;
+    border-color:black;
+}  */
+
+h1 {
+
+color:black;
+text-align:center;
+font-size:40px;
+font-style: italic;
+}
+
+h2 {
+    text-align:center;
+    font-size:35px;
+}
+
+h3 {
+    background-color:black;
+    color:pink;
+    text-align: center;
+
+}
+
+h4 {
+    color:hotpink;
+    font-size: 26px;
+}
+
+footer {
+    background-color: forestgreen;
+    height:20vh;
+}
+
+button {
+    background-color:black;
+    color:hotpink;
+}
+
+img {
+    height:150px;
+    width:150px;
+}
+
+.PrincessPeach {
+    image-orientation: inherit;  
+    border-radius: 10px; 
+   position: relative;
+}
+
+.CuteCloud {
+    width:250px;
+    height:150px;
+}
+
