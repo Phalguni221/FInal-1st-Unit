@@ -46,28 +46,23 @@ body {
 
 }
 
-.grid div {
-    height:50px;
-    width:50px;
-    background-color:pink;
-    border-radius:50px;
-    border-color:black;
-}
-
- /* .canvas {
-    height:fit-content;
-    width: fit-content;
-    display:flex;
-    flex-wrap:wrap;
+@keyframes fadeOut {
+   0% {opacity: 1;
+    }
+   100% {opacity:0;
+    } 
 } 
-
-.canvas div {
-    height:50px;
-    width:50px;
+.grid div {
+    height:70px;
+    width:70px;
     background-color:pink;
     border-radius:50px;
     border-color:black;
-}  */
+    left: 80px;
+    bottom:50px;
+    z-index:1;
+    animation: fadeOut 2s;
+}
 
 h1 {
 
@@ -106,13 +101,14 @@ button {
 
 img {
     height:150px;
-    width:150px;
+    width:150px;  
 }
 
 .PrincessPeach {
     image-orientation: inherit;  
     border-radius: 10px; 
    position: relative;
+   z-index:2;
 }
 
 .CuteCloud {

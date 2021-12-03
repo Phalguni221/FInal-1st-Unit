@@ -2,16 +2,10 @@
 var myGamePiece;
 
 function startGame() {
-    myGamePiece = new component(30, 30, "red", 80, 75);
+    myGamePiece = new component(30, 30, "pink", 80, 75);
     myGameArea.start();
 }
 
-setInterval(draw => {
-    for (let i = 0;  i < 1;  i++) {
-        const component = document.createElement('div1')
-        canvas.appendChild(component)   
-    }    
-},1000)
 
 var myGameArea = {
     canvas : document.createElement("canvas"),
@@ -29,6 +23,7 @@ var myGameArea = {
         this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
     }
 }
+
 
 function component(width, height, color, x, y, type) {
     this.type = type;
