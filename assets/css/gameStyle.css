@@ -41,8 +41,8 @@ body {
 .grid {
     height:fit-content;
     width: fit-content;
-    display:flex;
-    flex-wrap:wrap;
+    display:inline-block;
+    flex-wrap: nowrap;
 
 }
 
@@ -52,7 +52,7 @@ body {
    100% {opacity:0;
     } 
 } 
-.grid div {
+/* .grid div {
     height:70px;
     width:70px;
     background-color:pink;
@@ -61,8 +61,16 @@ body {
     left: 80px;
     bottom:50px;
     z-index:1;
-    animation: fadeOut 2s;
-}
+    animation: fade 6s;
+    transition-property: height;
+    transition-duration: 2s;
+    transition-timing-function: vertical;
+} */
+
+div:hover {
+    width: 300px;
+  }
+
 
 h1 {
 
@@ -89,7 +97,7 @@ h4 {
     font-size: 26px;
 }
 
-footer {
+.grass {
     background-color: forestgreen;
     height:20vh;
 }
@@ -114,5 +122,6 @@ img {
 .CuteCloud {
     width:250px;
     height:150px;
+    
 }
 
