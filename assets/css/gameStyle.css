@@ -40,9 +40,9 @@ body {
 
 .grid {
     height:fit-content;
-    width: fit-content;
+    width:fit-content;
     display:inline-block;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 
 }
 
@@ -52,24 +52,24 @@ body {
    100% {opacity:0;
     } 
 } 
-/* .grid div {
-    height:70px;
-    width:70px;
+.grid div {
+    height:40px;
+    width:40px;
     background-color:pink;
     border-radius:50px;
     border-color:black;
     left: 80px;
     bottom:50px;
     z-index:1;
-    animation: fade 6s;
+    animation: fadeOut 10s;
     transition-property: height;
-    transition-duration: 2s;
+    transition-duration: 4s;
     transition-timing-function: vertical;
-} */
+}
 
-div:hover {
-    width: 300px;
-  }
+.grid div:nth-child(1) { animation-delay: 0.1s; }
+.grid div:nth-child(2) {animation-delay:0.2s }
+.grid div:nth-child(3) { animation-delay:0.3s }
 
 
 h1 {
@@ -112,7 +112,7 @@ img {
     width:150px;  
 }
 
-.PrincessPeach {
+.PrincessPeachCute {
     image-orientation: inherit;  
     border-radius: 10px; 
    position: relative;
@@ -122,6 +122,7 @@ img {
 .CuteCloud {
     width:250px;
     height:150px;
+    position:relative;
     
 }
 
