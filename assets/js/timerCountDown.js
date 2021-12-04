@@ -1,4 +1,4 @@
-let currentTime = new Date();
+// let currentTime = new Date();
 // let cDay = currentDate.getDate()
 // let cMonth = currentDate.getMonth() + 1
 // let cYear = currentDate.getFullYear()
@@ -27,13 +27,12 @@ let currentTime = new Date();
 //   // Output the result in an element with id="demo"
 //   document.getElementById("timer").innerHTML = seconds + "s ";
     
-//   // If the count down is over, write some text 
-//   if (distance = 0) {
-//     clearInterval(x);
-//     document.getElementById("timer").innerHTML = "Time's Up!";
-//   };
+  // If the count down is over, write some text 
+  if (distance = 0) {
+    clearInterval(x);
+    document.getElementById("timer").innerHTML = "Time's Up!";
+  };
 
-//   })
   console.clear()
   let timer = document.querySelector('h1')
   let startingTime = 120
