@@ -3,29 +3,9 @@
 //Results Setup
 const DisplayResults = document.querySelector('.results')
 
-
-//CloudMovement
-// var cloudImage = null;
-// var cloudVelocity = 1;
-// var cloudAnimation;
-
-// var cloudImage2 = null;
-// var cloudVelocity2 = 1;
-// var cloudAnimation2;
-
-// function init() {
-//     cloudImage= document.getElementById('cloudImage');
-//     cloudImage.style.left = 0;
-//  cloudAnimation = setInterval(leftcloudMovement,1000);
-// }
-// function leftcloudMovement() {
-//     if (cloudImage.style.left > 50 &&  cloudVelocity < 0) {
-//         cloudVelocity = -cloudVelocity;
-//     }
-//     cloudImage.style.left = parseInt(cloudImage.style.left) + cloudVelocity * 100 + 'px';
-// }
-
-// init()
+// let c= squares[i]
+// let princess = document.querySelector(".PrincessPeachCute");
+// let b = collisionDetection;
 
 function getRandomInt() {
     return Math.floor(Math.random() * 800);
@@ -60,7 +40,36 @@ setInterval(() => {
     }
 }, 500)
 
+// isCollision(x, y, remove = true) {
+//     let collision = this.board[x][y] === remove ? 1 : 0
+//     if (collision === 1 && remove === true) {
+//         this.removeFromBoard(x, y);
 
+//         // tail.addToTail(x, y) // TODO?
+//     }
+//     return collision;
+// },
+
+
+
+
+// function toggle_visibility(id) {
+//     var c = document.getElementsByClassName("div");
+//     if(square.style.top == `${500}px`)
+//     square.style.top = 'none';
+//     else
+//     square.style.top = `${x}px`;
+//  }
+
+
+// function collisionDetection() {
+//     for(let c ; c< squares.length; c++) {
+//         for(let princess; princess<squares.length; princess++) {
+//             var b = squares[c][princess];
+//             // calculations
+//         }
+//     }
+// }
 
 // function checkGround() {
 //     for(let i=0; i<1; i++) {
@@ -88,14 +97,12 @@ setInterval(() => {
 //     }
 // }, 500)
 
-
-
 //
 //Stop function draw() at a height
 
 //PrincessPeachMovements
 
-let modifier = 5;
+let modifier = 7;
 let princess = document.querySelector(".PrincessPeachCute");
 princess.style.top = "0px";
 princess.style.left = "0px";
@@ -113,4 +120,10 @@ document.addEventListener('keydown', (event) => {
 
 
 
-
+// function collisionDetection() {
+//     for(var c=0; c<brickColumnCount; c++) {
+//         for(var r=0; r<brickRowCount; r++) {
+//             var b = bricks[c][r];
+//             // calculations
+//         }
+//     }
