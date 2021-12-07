@@ -1,10 +1,6 @@
 head {
     text-align:center;
 }
-/* 
-iframe {
-visibility: hidden;
-} */
 
 @keyframes bgcolor {
     0% {
@@ -32,6 +28,7 @@ visibility: hidden;
     }
 }
 
+
 body {
     min-height:100vh;
     text-align:center;
@@ -40,6 +37,7 @@ body {
         -webkit-animation-direction: alternate;
         animation-direction: alternate;
     }
+
 
 .grid {
     /* flex-wrap: wrap; */
@@ -54,7 +52,7 @@ body {
     } 
 } 
 
-.grid > div{
+ .grid > div{
     height:60px;
     width:60px;
     background-color:pink;
@@ -67,7 +65,6 @@ body {
     transition-timing-function: vertical;
     position:relative;
 }
-
 
 
 h1 {
@@ -117,7 +114,9 @@ img {
    position:relative;
    z-index:2;
    left: 0px;
-    top: 0px
+    top: 0px;
+    x:0;
+    y:0;
 }
 
 .CuteCloud {
