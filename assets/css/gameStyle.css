@@ -37,13 +37,27 @@ body {
         -webkit-animation-direction: alternate;
         animation-direction: alternate;
     }
+/* 
+    #canvas-wrap { position:relative; width:800px; height:600px}
 
+    #canvas-wrap canvas { position:absolute; top:0; left:0; z-index:0} */
 
+    /* .gameScreen{
+        width:600px;
+        height:700px;
+    } */
+/* 
+    #overlay {
+        position:absolute; 
+        top:20px; 
+        left:30px
+    } */
+ 
 .grid {
-    /* flex-wrap: wrap; */
-    width:300px;
-    height:300px;
-}
+    flex-wrap: wrap;
+    width:1800px;
+    height:200px;
+} 
 
 @keyframes fadeOut {
    0% {opacity: 1;
@@ -53,6 +67,7 @@ body {
 } 
 
  .grid > div{
+    position:relative; 
     height:60px;
     width:60px;
     background-color:pink;
@@ -63,7 +78,8 @@ body {
     transition-property: height;
     transition-duration: 4s;
     transition-timing-function: vertical;
-    position:relative;
+    /* position:relative; */
+
 }
 
 
@@ -113,10 +129,8 @@ img {
     border-radius: 10px; 
    position:relative;
    z-index:2;
-   left: 0px;
-    top: 0px;
-    x:0;
-    y:0;
+   /* left: 0px;
+    top: 0px; */
 }
 
 .CuteCloud {
