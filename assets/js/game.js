@@ -6,13 +6,12 @@ const DisplayResults = document.querySelector('.results')
 function getRandomInt() {
     return Math.floor(Math.random() * 800);
 }
-
-var Collectdiv = 3;
+var score = 0;
+var scoreText;
 
 // const Canvas = document.querySelector(".gameScreen");
-const grid= document.querySelector('.grid');
+const grid = document.querySelector('.grid');
 let squares = grid.children
-
 
 
 //Adds cupcakes to sceen from left every 1000ms
@@ -21,13 +20,13 @@ setInterval(() => {
     console.log(x)
     let square = document.createElement('div');
     square.style.top = `${x}px`;
-    square.style.left = `${x}px`;
+    square.style.left = `${x+600}px`;
+    square.style.right = `${x-600}px`;
+    square.style.bottom = `${x}px`;
     grid.appendChild(square);
     console.log(square);
 //    let squares = grid.children
-
 }, 1000)
-
 
 //Remove cupcakes when they touch ground
 setInterval(() => {
@@ -49,8 +48,6 @@ let modifier = 7;
 let princess = document.querySelector(".PrincessPeachCute");
 princess.style.top = "0px";
 princess.style.left = "0px";
-// princess.style.top = `${x}px`;
-// princess.style.left = `${x}px`;
 document.addEventListener('keydown', (event) => {
     console.log(`${parseInt(princess.style.top.replace('px', "")) - modifier}px`);
     switch (event.key) {
@@ -59,47 +56,68 @@ document.addEventListener('keydown', (event) => {
         case "ArrowLeft": princess.style.left = `${parseInt(princess.style.left) - modifier}px`; break;
         case "ArrowRight": princess.style.left = `${parseInt(princess.style.left) + modifier}px`; break;
     }
+})
 
-    // if (squares.style.left < princess.style.left &&
-    //     squares.style.left > princess.style.top &&
-    //     squares.style.top < princess.style.top &&
-    //    squares.style.top > squares.style.top) {
-    //     // collision detected!
-    //     toggle("green");
-    // } else {
-    //     // no collision
-    //     this.color("blue");
-    // }
+this.physics.add.overlap(princess, square, collectCupcake, null, this);
 
-    console.log(event.key);
-});
+function collectCupcake (princess, square)
+{
+    square.disableBody(true, true);
 
+    score += 10;
+    scoreText.setText('Score: ' + score);
+}
 
-//Collision of Objects 
+scoreText = this.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#000' });
 
-// var div = {top:`${x}px`, left:`${x}px`, w: 60, h: 60}
-// // var princess = {top: `${x}px`, left:`${x}px`, w: 40, h: 40}
+// document.onclick = function(){
+//     var e = document.getElementById('foo');
+//     e.square.display = ((e.square.display != 'none') ? 'none' : 'block');
+//  };
 
-// princess.addEventListener('keydown', (event) => {
-//     if (square.style.left < princess.style.left &&
-//         square.style.left > princess.top &&
-//         square.top < princess.top + princess.h &&
-//         square.h + square.top > square.top) {
-//         // collision detected!
-//         this.color("green");
-//     } else {
-//         // no collision
-//         this.color("blue");
+//     areCollisionsWithSquare(x, y) => {
+//         // Note: sparkle is shown in the gameBoard by an element that is "true"
+//         if (x < 0 || y < 0) {
+//             return 0;  // Not a valid coordinate
+//         }
+//         let collisions = 0;
+//         let xCoord = x / this.spriteSize;
+//         let yCoord = y / this.spriteSize;
+//         if (x % this.spriteSize === 0 && y % this.spriteSize === 0) {
+//             // On exactly one square (so only need to check 1 tile)
+//             collisions += this.isCollision(xCoord, yCoord);
+//         } else if (x % this.spriteSize === 0) {
+//             // Is in the same row (so only need to check 2 tiles)
+//             yCoord = Math.floor(yCoord);
+    
+//             // Check top-most tile could be colliding with
+//             collisions += this.isCollision(xCoord, yCoord);
+    
+//             // Check the tile one down
+//             collisions += this.isCollision(xCoord, yCoord + 1);
+//         } else if (y % this.spriteSize === 0) {
+//             // Is in the same column (so only need to check 2 tiles)
+//             xCoord = Math.floor(xCoord);
+    
+//             // Check the left-most tile could be colliding with
+//             collisions += this.isCollision(xCoord, yCoord);
+    
+//             // Check the tile one down
+//             collisions += this.isCollision(xCoord + 1, yCoord);
+//         } else {
+//             // Is not in the same row or column (so need to check 4 tiles)
+//             xCoord = Math.floor(xCoord);
+//             yCoord = Math.floor(yCoord);
+//             collisions += this.isCollision(xCoord, yCoord);
+//             collisions += this.isCollision(xCoord + 1, yCoord);
+//             collisions += this.isCollision(xCoord, yCoord + 1);
+//             collisions += this.isCollision(xCoord + 1, yCoord + 1);
+//         }
+//         return collisions;
 //     }
+//     console.log(event.key);
 // });
 
-// if(squareCoord.x < princessCoord.x +princessCoord.width &&
-//     squareCoord.x +squareCoord.width > princessCoord.x &&
-//     squareCoord.y < princessCoord.y + princessCoord.height &&
-//     squareCoord.y + squareCoord.height > princessCoord.y 
-//     ){
-        
-//     } else {
-//         //no collision
-//     }
+
+
 
