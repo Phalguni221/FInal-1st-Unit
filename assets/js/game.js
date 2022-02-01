@@ -58,6 +58,19 @@ document.addEventListener('keydown', (event) => {
     }
 })
 
+for (let i = 0;  i < 70; i++) {
+    let prin = parseInt(princess.style.left)
+    let x = parseInt(squares[i].left)
+if (x < prin || prin < x + 100) {
+    let prin1 = parseInt(princess.style.top)
+    let y = parseInt(squares[i].top)
+    if ( y < prin1 || prin1 < y + 100) {
+        console.log("collision")
+
+    }
+}
+}
+
 this.physics.add.overlap(princess, square, collectCupcake, null, this);
 
 function collectCupcake (princess, square)
@@ -69,55 +82,6 @@ function collectCupcake (princess, square)
 }
 
 scoreText = this.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#000' });
-
-// document.onclick = function(){
-//     var e = document.getElementById('foo');
-//     e.square.display = ((e.square.display != 'none') ? 'none' : 'block');
-//  };
-
-//     areCollisionsWithSquare(x, y) => {
-//         // Note: sparkle is shown in the gameBoard by an element that is "true"
-//         if (x < 0 || y < 0) {
-//             return 0;  // Not a valid coordinate
-//         }
-//         let collisions = 0;
-//         let xCoord = x / this.spriteSize;
-//         let yCoord = y / this.spriteSize;
-//         if (x % this.spriteSize === 0 && y % this.spriteSize === 0) {
-//             // On exactly one square (so only need to check 1 tile)
-//             collisions += this.isCollision(xCoord, yCoord);
-//         } else if (x % this.spriteSize === 0) {
-//             // Is in the same row (so only need to check 2 tiles)
-//             yCoord = Math.floor(yCoord);
-    
-//             // Check top-most tile could be colliding with
-//             collisions += this.isCollision(xCoord, yCoord);
-    
-//             // Check the tile one down
-//             collisions += this.isCollision(xCoord, yCoord + 1);
-//         } else if (y % this.spriteSize === 0) {
-//             // Is in the same column (so only need to check 2 tiles)
-//             xCoord = Math.floor(xCoord);
-    
-//             // Check the left-most tile could be colliding with
-//             collisions += this.isCollision(xCoord, yCoord);
-    
-//             // Check the tile one down
-//             collisions += this.isCollision(xCoord + 1, yCoord);
-//         } else {
-//             // Is not in the same row or column (so need to check 4 tiles)
-//             xCoord = Math.floor(xCoord);
-//             yCoord = Math.floor(yCoord);
-//             collisions += this.isCollision(xCoord, yCoord);
-//             collisions += this.isCollision(xCoord + 1, yCoord);
-//             collisions += this.isCollision(xCoord, yCoord + 1);
-//             collisions += this.isCollision(xCoord + 1, yCoord + 1);
-//         }
-//         return collisions;
-//     }
-//     console.log(event.key);
-// });
-
 
 
 
