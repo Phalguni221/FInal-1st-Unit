@@ -43,13 +43,13 @@ setInterval(() => {
 }, 500)
 
 //PrincessPeachMovements
-for (let i = 0;  i < 70; i++) {
-    const squares = document.createElement('div')
-    grid.appendChild(squares)
-}
+// for (let i = 0;  i < 70; i++) {
+//     const squares = document.createElement('div')
+//     grid.appendChild(squares)
+// }
 
-const squares = grid.children
-let x = parseInt(squares[i].left)
+// const squares = grid.children
+// let x = parseInt(squares[i].left)
 
 
 let modifier = 7;
@@ -57,7 +57,7 @@ let princess = document.querySelector(".PrincessPeachCute");
 princess.style.top = "0px";
 princess.style.left = "0px";
 document.addEventListener('keydown', (event) => {
-    console.log(`${parseInt(princess.style.top.replace('px', "")) - modifier}px`);
+    // console.log(`${parseInt(princess.style.top.replace('px', "")) - modifier}px`);
     switch (event.key) {
         case "ArrowUp": princess.style.top = `${parseInt(princess.style.top) - modifier}px`; break;
         case "ArrowDown": princess.style.top = `${parseInt(princess.style.top) + modifier}px`; break;
@@ -68,18 +68,18 @@ document.addEventListener('keydown', (event) => {
 })
 
 
-for (let i = 0;  i < 70; i++) {
-    let prin = parseInt(princess.style.left)
-    let x = parseInt(squares[i].left)
-if (x < prin || prin < x + 100) {
-    let prin1 = parseInt(princess.style.top)
-    let y = parseInt(squares[i].top)
-    if ( y < prin1 || prin1 < y + 100) {
-        console.log("collision")
+// for (let i = 0;  i < 70; i++) {
+//     let prin = parseInt(princess.style.left)
+//     let x = parseInt(squares[i].left)
+// if (x < prin || prin < x + 100) {
+//     let prin1 = parseInt(princess.style.top)
+//     let y = parseInt(squares[i].top)
+//     if ( y < prin1 || prin1 < y + 100) {
+//         console.log("collision")
 
-    }
-}
-}
+//     }
+// }
+// }
 
 this.physics.add.overlap(princess, square, collectCupcake, null, this);
 
