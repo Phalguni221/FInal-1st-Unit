@@ -43,6 +43,14 @@ setInterval(() => {
 }, 500)
 
 //PrincessPeachMovements
+for (let i = 0;  i < 70; i++) {
+    const squares = document.createElement('div')
+    grid.appendChild(squares)
+}
+
+const squares = grid.children
+let x = parseInt(squares[i].left)
+
 
 let modifier = 7;
 let princess = document.querySelector(".PrincessPeachCute");
@@ -56,7 +64,9 @@ document.addEventListener('keydown', (event) => {
         case "ArrowLeft": princess.style.left = `${parseInt(princess.style.left) - modifier}px`; break;
         case "ArrowRight": princess.style.left = `${parseInt(princess.style.left) + modifier}px`; break;
     }
+    console.log(key)
 })
+
 
 for (let i = 0;  i < 70; i++) {
     let prin = parseInt(princess.style.left)
