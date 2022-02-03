@@ -64,11 +64,7 @@ document.addEventListener('keydown', (event) => {
         case "ArrowLeft": princess.style.left = `${parseInt(princess.style.left) - modifier}px`; break;
         case "ArrowRight": princess.style.left = `${parseInt(princess.style.left) + modifier}px`; break;
     }
-    console.log(key)
-})
-
-
-// for (let i = 0;  i < 70; i++) {
+    // for (let i = 0;  i < 70; i++) {
 //     let prin = parseInt(princess.style.left)
 //     let x = parseInt(squares[i].left)
 // if (x < prin || prin < x + 100) {
@@ -80,6 +76,9 @@ document.addEventListener('keydown', (event) => {
 //     }
 // }
 // }
+    console.log(key)
+})
+
 
 this.physics.add.overlap(princess, square, collectCupcake, null, this);
 
