@@ -80,19 +80,6 @@ if (x < prin || prin < x + 100) {
 })
 
 
-// for (let i = 0;  i < 70; i++) {
-//     let prin = parseInt(princess.style.left)
-//     let x = parseInt(squares[i].left)
-// if (x < prin || prin < x + 100) {
-//     let prin1 = parseInt(princess.style.top)
-//     let y = parseInt(squares[i].top)
-//     if ( y < prin1 || prin1 < y + 100) {
-//         console.log("collision")
-
-//     }
-// }
-// }
-
 this.physics.add.overlap(princess, square, collectCupcake, null, this);
 
 function collectCupcake (princess, square)
