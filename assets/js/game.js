@@ -64,6 +64,18 @@ document.addEventListener('keydown', (event) => {
         case "ArrowLeft": princess.style.left = `${parseInt(princess.style.left) - modifier}px`; break;
         case "ArrowRight": princess.style.left = `${parseInt(princess.style.left) + modifier}px`; break;
     }
+    for (let i = 0;  i < 70; i++) {
+    let prin = parseInt(princess.style.left)
+    let x = parseInt(squares[i].left)
+if (x < prin || prin < x + 100) {
+    let prin1 = parseInt(princess.style.top)
+    let y = parseInt(squares[i].top)
+    if ( y < prin1 || prin1 < y + 100) {
+        console.log("collision")
+
+    }
+}
+}
     console.log(key)
 })
 
