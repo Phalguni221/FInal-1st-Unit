@@ -1,5 +1,4 @@
 
-
 //Results Setup
 const DisplayResults = document.querySelector('.results')
 
@@ -42,7 +41,7 @@ setInterval(() => {
     }
 }, 500)
 
-//PrincessPeachMovements
+// PrincessPeachMovements
 // for (let i = 0;  i < 70; i++) {
 //     const squares = document.createElement('div')
 //     grid.appendChild(squares)
@@ -50,6 +49,7 @@ setInterval(() => {
 
 // const squares = grid.children
 // let x = parseInt(squares[i].left)
+// lety = parseInt(squares[i].top)
 
 
 let modifier = 7;
@@ -57,7 +57,7 @@ let princess = document.querySelector(".PrincessPeachCute");
 princess.style.top = "0px";
 princess.style.left = "0px";
 document.addEventListener('keydown', (event) => {
-    // console.log(`${parseInt(princess.style.top.replace('px', "")) - modifier}px`);
+    console.log(`${parseInt(princess.style.top.replace('px', "")) - modifier}px`);
     switch (event.key) {
         case "ArrowUp": princess.style.top = `${parseInt(princess.style.top) - modifier}px`; break;
         case "ArrowDown": princess.style.top = `${parseInt(princess.style.top) + modifier}px`; break;
@@ -92,6 +92,8 @@ function collectCupcake (princess, square)
 }
 
 scoreText = this.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#000' });
+
+
 
 
 

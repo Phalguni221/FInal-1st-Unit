@@ -36,8 +36,27 @@ body {
         animation: bgcolor 40s infinite;
         -webkit-animation-direction: alternate;
         animation-direction: alternate;
+        margin: 0; height: 10%;  
+        overflow-y: hidden;
+        overflow: hidden;
+       
     }
 
+    /* .scrollable{
+        overflow-y: scroll;
+        height: 200px;
+        background: #f8d0e6;
+        padding: 40px;
+      } */
+
+    .disable-scroll{
+        overflow-y: hidden;
+      }
+
+      .buttons-scroll{
+        margin-left: 250px;
+      }
+  
 .grid {
     flex-wrap: wrap;
     width:1800px;
@@ -83,6 +102,10 @@ color:black;
 text-align:center;
 font-size:40px;
 font-style: italic;
+float:left;
+background-color:white;
+
+margin-left:20px;
 }
 
 h2 {
@@ -98,11 +121,12 @@ h3 {
     top:100px;
     right:880px;
 
+
 }
 
 h4 {
     color:hotpink;
-    font-size: 26px;
+    font-size: 35px;
 }
 
 .grass {
