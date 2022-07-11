@@ -86,8 +86,8 @@ body {
 
 }
 
-.iframe {
-    size:0.5px;
+iframe {
+    size:-100px;
 }
 
 a {
@@ -138,7 +138,13 @@ button {
     font-size:20px;
 }
 
+button:hover {
+    transform: scale(0.8);
+}
 
+button:active {
+    opacity:0.5;
+}
 
 img {
     height:150px;

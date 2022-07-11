@@ -1,6 +1,7 @@
 head {
     text-align:center;
 }
+
 body {
     min-height:100vh;
     background:linear-gradient(to top, rgb(64, 161, 199), rgb(135, 206, 235), white);  
@@ -23,12 +24,13 @@ h1 {
         background-color:black;
         color:pink;
         text-align: center;
+        font-size:20px;
     
     }
     
     h4 {
         color:black;
-        font-size: 16px;
+        font-size: 20px;
     }
     
     footer {
@@ -36,14 +38,24 @@ h1 {
         height:20vh;
     }
     
+
     button {
         background-color:black;
         color:hotpink;
+        font-size:15px;
     }
     
+    button:hover {
+        transform: scale(0.8);
+    }
+    
+    button:active {
+        opacity:0.5;
+    }
+
     .PeachPresenting {
-        height:200px;
-        width: 150px;
+        height:300px;
+        width: 200px;
         
     }
     
