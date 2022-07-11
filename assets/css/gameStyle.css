@@ -124,7 +124,7 @@ h3 {
 
 h4 {
     color:hotpink;
-    font-size: 35px;
+    font-size: 25px;
 }
 
 .grass {
@@ -170,6 +170,7 @@ img {
 table {
     border-color:gold;
     border-radius:2px;
-    display: inline-block ;
+    display: inline-block ; 
     
 }
+
