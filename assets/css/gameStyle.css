@@ -159,15 +159,28 @@ button:active {
 
 img {
     height:150px;
-    width:150px;  
+    width:150px; 
+    border-color:hotpink; 
+    border-style:solid;
+    transition: width 2s; 
 }
+
+image {
+    height:150px;
+    width:150px; 
+    border-color:hotpink; 
+    border-style:solid;
+
+}
+
+
 
 .PrincessPeachCute {
     image-orientation: inherit;  
     border-radius: 10px; 
    position:relative;
    z-index:2;
-   border-radius:2px;
+   border-radius:20px;
    border-color:hotpink;
 }
 
