@@ -1,4 +1,3 @@
-
 //Disable Scroll
 
 // function preventScroll(e){
@@ -23,4 +22,3 @@ function disable(){
 // document.querySelector('#allow').addEventListener('click', enable);
 
 // document.querySelector('#scrollable').addEventListener('wheel', preventScroll, {passive: false});
-

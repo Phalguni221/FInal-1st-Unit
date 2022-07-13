@@ -82,7 +82,7 @@ body {
     transition-property: height;
     transition-duration: 4s;
     transition-timing-function: vertical;
-    /* position:relative; */
+    position:relative;
 
 }
 
@@ -114,12 +114,13 @@ h2 {
 }
 
 h3 {
-    background-color:black;
-    color:pink;
+    /* background-color:black; */
+    /* color:pink; */
     text-align: center;
     font-size:15px;
     top:100px;
     right:880px;
+    height:30px;
 }
 
 h4 {
@@ -129,17 +130,27 @@ h4 {
 
 .grass {
     background-color: forestgreen;
-    height:20vh;
+    height:40vh;
 }
 
 button {
     background-color:black;
     color:hotpink;
     font-size:20px;
+    border-color:pink;
+    border-radius:2px;
+    box-shadow: 4px 4px hotpink;
+    /* height:30px; */
+    margin-right:40px;
+    margin-left:5px;
+    height:40px;
+    margin-bottom:200px;
 }
 
 button:hover {
     transform: scale(0.8);
+    border-color:pink;
+    border-radius:2px;
 }
 
 button:active {
@@ -156,8 +167,8 @@ img {
     border-radius: 10px; 
    position:relative;
    z-index:2;
-   /* left: 0px;
-    top: 0px; */
+   border-radius:2px;
+   border-color:hotpink;
 }
 
 .CuteCloud {
@@ -173,4 +184,3 @@ table {
     display: inline-block ; 
     
 }
-
