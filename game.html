@@ -8,17 +8,33 @@
   <link rel="stylesheet" href="./assets/css/gamestyle.css"/>
   <a href="index.html"></a>
 
-  <!-- <iframe class src="https://www.youtube.com/embed/3ijDdxmoiX0?autoplay=1" width="560" height="315" title="YouTube video player" 
-  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </head> -->
-<!-- 
- <button id ="prevent">Prevent Scroll</button> 
- <button id ="allow">Allow Scroll</button> -->
+  <script>
 
+
+  function Buttontoggle() {
+
+  var playButton = document.getElementById("playButton");
+  
+  playButton.addEventListener("click", function() {
+    if(grid.paused == true) {
+      grid.play();
+      // button.innerHTML = "Play";
+    } else {
+      grid.pause();
+      // button.innerHTML = "Play";
+    }
+  }
+  )
+  }
+</script>
+
+  </head>
+
+  <body>
  <table>
 <tr>
 <h1 id ="demo">00:00</h1>
-<h1>0</h1>
+<h1>00</h1>
 </tr>
 </table>
 <br>
@@ -36,22 +52,26 @@
 
   <h4>Control the floating glass box to move Peach in order to catch all of the falling cupcakes! <br>
     Don't let them touch the ground!</h4>
-   <img class="CuteCloud" id="cloudImage" src="./assets/images/CuteCloud.png"></img>
-   <img class="CuteCloud" id="cloudImage" src="./assets/images/CuteCloud.png"></img>
-   <img class="CuteCloud" id="cloudImage" src="./assets/images/CuteCloud.png"></img>
-   <img class="CuteCloud" id="cloudImage" src="./assets/images/CuteCloud.png"></img>
-   <img class="CuteCloud" id="cloudImage" src="./assets/images/CuteCloud.png"></img>
-   <img class="CuteCloud" id="cloudImage" src="./assets/images/CuteCloud.png"></img>
-   <img class="CuteCloud" id="cloudImage" src="./assets/images/CuteCloud.png"></img>
+   <img class="CuteCloud" id="cloudImage" src="./assets/images/CuteCloud.jpg"></img>
+   <img class="CuteCloud" id="cloudImage" src="./assets/images/CuteCloud.jpg"></img>
+   <img class="CuteCloud" id="cloudImage" src="./assets/images/CuteCloud.jpg"></img>
+   <img class="CuteCloud" id="cloudImage" src="./assets/images/CuteCloud.jpg"></img>
+   <img class="CuteCloud" id="cloudImage" src="./assets/images/CuteCloud.jpg"></img>
+   <img class="CuteCloud" id="cloudImage" src="./assets/images/CuteCloud.jpg"></img>
+   <img class="CuteCloud" id="cloudImage" src="./assets/images/CuteCloud.jpg"></img>
 
    <br>
    <br>
-   
+
+
    <body>
-    <div class="grid"></div>
+    <grid>
+      <div class ="grid"></div>
+   
  <div><image class= "PrincessPeachCute" src="./assets/images/PrincessPeachCute.jpg" alt="PrincessPeach"></image></div>
     <div class="grass">
-    
+ 
+   
     <table>
       <tr>
        <td>
@@ -66,27 +86,25 @@
       </td>
       <td>
    <h3>
-    <button id="playButton" type="button" class="btn btn-default btn-xs">
-        <span class="glyphicon glyphicon-play"></span>
-     </button>
-    <button id="pauseButton" type="button" class="btn btn-default btn-xs">
+
+    <button onclick="Buttontoggle()" id="playButton" type="button" class="btn btn-default btn-xs">
+        Play
+        <span class="glyphicon glyphicon-pause"></span>
+        <!-- <span class="glyphicon glyphicon-play"></span> -->
+    </button>
+
+    <button onclick="Buttontoggle()" id="playButton" type="Button" class="btn btn-default btn-xs">
+      Pause
         <span class="glyphicon glyphicon-pause"></span>
     </button>
+
   </h3>
        </td>
      </tr>
  </table> 
-</div>
+</grid>
   </body>
-  <br/>
-  <br/>
-     <table>
-     <tr>
-      <td>
-    <a href ="index.html"><h3><button>Back to Instructions</button></h3></a>
-      </td>
-    </tr>
-</table> 
+  
   
 <footer>
   <script src="./assets/js/scroll.js"></script>
@@ -94,5 +112,6 @@
   <script src="./assets/js/phaser-collision.js"></script>
   <script src="./assets/js/game.js"></script>
   <script src="./assets/js/timerCountDown.js"></script>
+  <script src="./assets/js/button.js"></script>
   </footer>
 </html>
