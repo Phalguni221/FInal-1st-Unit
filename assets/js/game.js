@@ -25,21 +25,36 @@ setInterval(() => {
     grid.appendChild(square);
     console.log(square);
 //    let squares = grid.children
-}, 1000)
+}, 2000)
 
-//Remove cupcakes when they touch ground
+// //Remove cupcakes when they touch ground
+// setInterval(() => {
+//     for (let i = 0; i < squares.length; i++) {
+//        let c= squares[i];
+//         console.log("Did it hit the ground?", c)
+//         // if cupcake is at height of ground, then remove it 
+//         // if cupcake(vertical position) >= ground(vertical position) then remove cupcake 
+//         console.log("What is squares?", squares)
+//         if (c.style.top = "0px") {
+//             console.log("Kill the cupcake!");
+//         }
+//     }
+// }, 500)
+
 setInterval(() => {
-    for (let i = 0; i < squares.length; i++) {
-       let c= squares[i];
-        console.log("Did it hit the ground?", c)
-        // if cupcake is at height of ground, then remove it 
-        // if cupcake(vertical position) >= ground(vertical position) then remove cupcake 
-        console.log("What is squares?", squares)
-        if (c.style.top = "0px") {
-            console.log("Kill the cupcake!");
+    setInterval(() => {
+        for (let i = 0; i < squares.length; i++) {
+           let c= squares[i];
+            console.log("Did it hit the ground?", c)
+            // if cupcake is at height of ground, then remove it 
+            // if cupcake(vertical position) >= ground(vertical position) then remove cupcake 
+            console.log("What is squares?", squares)
+            if (c.style.top = "0px") {
+                console.log("Kill the cupcake!");
+            }
         }
-    }
-}, 500)
+    }, 500)
+}, 100)
 
 // PrincessPeachMovements
 // for (let i = 0;  i < 70; i++) {
@@ -52,7 +67,7 @@ setInterval(() => {
 // lety = parseInt(squares[i].top)
 
 
-let modifier = 7;
+let modifier = 8;
 let princess = document.querySelector(".PrincessPeachCute");
 princess.style.top = "0px";
 princess.style.left = "0px";
