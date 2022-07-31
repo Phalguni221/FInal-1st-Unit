@@ -6,8 +6,8 @@ body {
     min-height:100vh;
     background:linear-gradient(to top, rgb(64, 161, 199), rgb(135, 206, 235), white);  
     margin: 5; height: 50%;  
-    overflow-y: hidden;
-    overflow: hidden;
+    /* overflow-y: hidden;
+    overflow: hidden; */
 }
 
 h1 {
