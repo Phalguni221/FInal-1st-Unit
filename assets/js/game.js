@@ -27,19 +27,18 @@ setInterval(() => {
 //    let squares = grid.children
 }, 2000)
 
-// //Remove cupcakes when they touch ground
-// setInterval(() => {
-//     for (let i = 0; i < squares.length; i++) {
-//        let c= squares[i];
-//         console.log("Did it hit the ground?", c)
-//         // if cupcake is at height of ground, then remove it 
-//         // if cupcake(vertical position) >= ground(vertical position) then remove cupcake 
-//         console.log("What is squares?", squares)
-//         if (c.style.top = "0px") {
-//             console.log("Kill the cupcake!");
-//         }
-//     }
-// }, 500)
+//play-pause buttons 
+function playPause() { 
+
+    let PlayPause = document.getElementById('playButton');
+    
+    if (PlayPause.paused) 
+      PlayPause.play();
+      
+    if
+      (PlayPause.play)
+    PlayPause.pause();  
+    }
 
 setInterval(() => {
     setInterval(() => {
