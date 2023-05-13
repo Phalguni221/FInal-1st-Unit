@@ -2,7 +2,7 @@
 
 function Buttontoggle() {
 
-    let PlayPause = document.getElementById('playButton');
+    let PlayPause = document.getElementById("grid");
     
     if (PlayPause.paused) 
       PlayPause.play();
