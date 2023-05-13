@@ -13,7 +13,7 @@ const grid = document.querySelector('.grid');
 let squares = grid.children
 
 
-//Adds cupcakes to sceen from left every 1000ms
+//Adds cupcakes to screen every 1000ms
 setInterval(() => {
     let x = getRandomInt()
     console.log(x)
@@ -33,11 +33,11 @@ function playPause() {
     let PlayPause = document.getElementById('playButton');
     
     if (PlayPause.paused) 
-      PlayPause.play();
+      setInterval.play();
       
     if
       (PlayPause.play)
-    PlayPause.pause();  
+    setInterval.pause();  
     }
 
 setInterval(() => {
