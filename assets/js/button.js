@@ -1,4 +1,4 @@
- var gameButton = document.getElementById("grid1");
+ var gameButton = document.getElementById("grid");
     
     function playButton() { 
         gameButton.play(); 
