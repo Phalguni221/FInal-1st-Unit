@@ -25,11 +25,11 @@ h1 {
     
     h3 {
         background-color:black;
-        color:pink;
-        text-align: center;
-        font-size:23px;
-        margin-bottom:20px;
-    
+        color:hotpink;
+        text-align:center;
+        font-size:30px;
+        margin-bottom:130px;
+      
     }
     
     h4 {
@@ -78,12 +78,20 @@ h1 {
     }
 
     .PeachPresenting {
-        height:350px;
-        width: 250px;
-        margin-right:20px;
-       
-    
+        height:400px;
+        width: 300px;
+        margin-right:6px;
         
+    }
+
+    p {
+        color:pink;
+        text-align:center;
+        font-size:30px;
+        font-style: italic;
+        float:left;
+        background-color:black;
+        margin-left:20px;
     }
     
     

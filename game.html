@@ -8,45 +8,23 @@
   <link rel="stylesheet" href="./assets/css/gamestyle.css"/>
   <a href="index.html"></a>
 
-  <script>
-
-
-  function Buttontoggle() {
-
-  var playButton = document.getElementById("playButton");
-  
-  playButton.addEventListener("click", function() {
-    if(grid.paused == true) {
-      grid.play();
-      // button.innerHTML = "Play";
-    } else {
-      grid.pause();
-      // button.innerHTML = "Play";
-    }
-  }
-  )
-  }
-</script>
-
-  </head>
+</head>
 
   <body>
- <table>
-<tr>
-<h1 id ="demo">00:00</h1>
-<h1>00</h1>
-</tr>
-</table>
-<br>
-<br/>
-<br/>
 <table>
-  <tr>
-<h1><iframe class src="https://www.youtube.com/embed/3ijDdxmoiX0?autoplay=1" width="250" height="205" title="YouTube video player" 
-  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</h1>
-</tr>
+<h1>
+  <p>Background Music</p>
+  <audio id ="gameMusic" width = "300" height="100" controls>
+     <source src="02 Title Theme.mp3"  type="audio/mpeg">
+  </audio>
 </table> 
+<br>
+<br>
+<table>
+    <div></div>
+    <h1 id ="demo">00:00</h1>
+    <h1>00</h1>
+</table>
 
 
 
@@ -65,7 +43,7 @@
 
 
    <body>
-    <grid>
+    <grid id = "grid1">
       <div class ="grid"></div>
    
  <div><image class= "PrincessPeachCute" src="./assets/images/PrincessPeachCute.jpg" alt="PrincessPeach"></image></div>
@@ -74,35 +52,35 @@
    
     <table>
       <tr>
-       <td>
-        <a href ="index.html"><h3><button>Back to Instructions</button></h3></a>
-        <div></div>
-       </td>
-       <!-- <div></div>
-       <div></div> -->
-       <td>
+        <br>
+        <br>
+       <a href ="index.html"><button>Back to Instructions</button></a>
         <!-- <div></div> -->
-   <a href=""><h3><button>Reset Button</button></h3></a>
-      </td>
-      <td>
-   <h3>
-
-    <button onclick="Buttontoggle()" id="playButton" type="button" class="btn btn-default btn-xs">
-        Play
-        <span class="glyphicon glyphicon-pause"></span>
-        <!-- <span class="glyphicon glyphicon-play"></span> -->
-    </button>
-
-    <button onclick="Buttontoggle()" id="playButton" type="Button" class="btn btn-default btn-xs">
-      Pause
-        <span class="glyphicon glyphicon-pause"></span>
-    </button>
-
-  </h3>
-       </td>
+   <a href=""><button>Reset Button</button></a> 
+   <button class="bcls-button" onclick="playVid()" type="button" >
+    Play Audio
+    <span class="glyphicon glyphicon-pause"></span>
+    <!-- <span class="glyphicon glyphicon-play"></span> -->
+  </button>
+  <button class="bcls-button" onclick="pauseVid()" id="gameButton" type="Button">
+    Pause Audio
+      <span class="glyphicon glyphicon-pause"></span>
+  </button> 
      </tr>
  </table> 
 </grid>
+<!-- JS for Play and Pause Button -->
+<script>
+    var gameButton = document.getElementById("gameMusic"); 
+
+    function playVid() { 
+      gameButton.play(); 
+    } 
+
+    function pauseVid() { 
+    gameButton.pause(); 
+    } 
+</script>
   </body>
   
   

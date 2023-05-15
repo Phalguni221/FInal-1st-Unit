@@ -8,10 +8,8 @@ function getRandomInt() {
 var score = 0;
 var scoreText;
 
-// const Canvas = document.querySelector(".gameScreen");
 const grid = document.querySelector('.grid');
 let squares = grid.children
-
 
 //Adds cupcakes to sceen from left every 1000ms
 setInterval(() => {
@@ -24,22 +22,8 @@ setInterval(() => {
     square.style.bottom = `${x}px`;
     grid.appendChild(square);
     console.log(square);
-//    let squares = grid.children
 }, 2000)
 
-// //Remove cupcakes when they touch ground
-// setInterval(() => {
-//     for (let i = 0; i < squares.length; i++) {
-//        let c= squares[i];
-//         console.log("Did it hit the ground?", c)
-//         // if cupcake is at height of ground, then remove it 
-//         // if cupcake(vertical position) >= ground(vertical position) then remove cupcake 
-//         console.log("What is squares?", squares)
-//         if (c.style.top = "0px") {
-//             console.log("Kill the cupcake!");
-//         }
-//     }
-// }, 500)
 
 setInterval(() => {
     setInterval(() => {

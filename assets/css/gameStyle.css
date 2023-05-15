@@ -44,13 +44,6 @@ body {
        
     }
 
-    /* .scrollable{
-        overflow-y: scroll;
-        height: 200px;
-        background: #f8d0e6;
-        padding: 40px;
-      } */
-
     .disable-scroll{
         overflow-y: hidden;
       }
@@ -102,7 +95,7 @@ h1 {
 
 color:black;
 text-align:center;
-font-size:40px;
+font-size:30px;
 font-style: italic;
 float:left;
 background-color:white;
@@ -175,7 +168,11 @@ image {
 
 }
 
-
+p {
+    font-size:25px;
+    color:hotpink;
+    font-style:italic;
+}
 
 .PrincessPeachCute {
     image-orientation: inherit;  
