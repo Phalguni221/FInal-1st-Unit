@@ -9,39 +9,58 @@
   <h1>Welcome to Cupcake Fantasy!!!</h1>
 </head>
 <body>
- 
+  <table>
+    <div></div>
+      <br>
+      <p>Click to hear a special message!</p>
+    <audio id ="gameIntro" controls>
+      <source src="03 Peach's Message.mp3"  type="audio/mpeg">
+    </audio>
+ </table>
+ <br>
+ <br>
+ <br>
+ <div></div>
+ <table>
+  <tr>
+    <td>
+      <img class= "PeachPresenting" src="./assets/images/PrincessPeachPresenting.png" alt="Princess Peach"></img>
+      <img>
+  </td>
+  <td>
   <h2>Directions:Try to get as many cupcakes as you can before time runs out!!</h2>
     <h3>
-      <p>
-        Hello! The goal is to collect as many cupcakes as possible to save Peach's bakery. Peach was delivering goods around the neighborhood one day when it suddenly started raining cupcakes straight from the sky!! 
-        It seems as if Peach decided that collecting the cupcakes was a good way to make money and save her bakery!! 
-        However, the main catch is to catch as many cupcakes as you can without letting them fall to the ground. 
-        All the collected cupcakes will be sold at night, during Mario's birthday party!! Hurry, the party starts soon!!
-        Catch as many cupcakes as you can within 2 minutes in order to reach the party on time!! 
-      </p>
-      <p>
+        The goal is to collect as many cupcakes as possible to save Peach's bakery. Peach was delivering goods around the neighborhood one day when it 
+        suddenly started raining cupcakes!! 
+        <br>
+        <br>
+        Peach decided that collecting the cupcakes was a good way to make money and save her bakery!! 
+        <br>
+        The main catch is to catch as many cupcakes as you can without letting them fall to the ground. 
+        All the collected cupcakes will be sold at night, during Mario's birthday party!! 
+        Hurry, the party starts soon!!
+        Catch as many cupcakes as you can within 2 minutes!
+        <br>
+        <br>
         Peach:"Try to get as many cupcakes as you can before time runs out!"
-      </p>
-      <p>
-      <img class= "PeachPresenting" src="./assets/images/PrincessPeachPresenting.png" alt="Princess Peach"></img>
-      </p>
-      </h3>
+    </h3>
+  </td>
+</tr>
+    <td>
       <img>
-      <a href="game.html"><button>Click here to Begin!</button></a>
-    </img>
-  
-
-    <!-- <br>
-
-  <img class= "PeachPresenting" src="./assets/images/PrincessPeachPresenting.png" alt="Princess Peach">
-  <a href="game.html"><h3></h3><button>Click here to Begin!</button></a>
-</img>
-
-    <h4>
-    Peach:"Try to get as many cupcakes before time runs out!"
-    </h4> -->
+      <a href="game.html"><button onclick = "onBtnClickHandle()";  type="button" >Click here to Begin!</button></a>
+      </img> 
+    </td>
+  </table>
   </body>
+<!-- JS for Play and Pause Button -->
+<script>
+  var gameIntro = document.getElementById("gameIntro"); 
 
+  function playIntro() { 
+    gameIntro.play(); 
+  }   
+</script>
 
 <script src ="./assets/js/script.js"></script>
 <script src= "./assets/js/collision.js"></script>
