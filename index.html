@@ -9,14 +9,6 @@
   <h1>Welcome to Cupcake Fantasy!!!</h1>
 </head>
 <body>
-  <table>
-    <div></div>
-      <br>
-      <p>Click to hear a special message!</p>
-    <audio id ="gameIntro" controls>
-      <source src="03 Peach's Message.mp3"  type="audio/mpeg">
-    </audio>
- </table>
  <br>
  <br>
  <br>
@@ -25,10 +17,9 @@
   <tr>
     <td>
       <img class= "PeachPresenting" src="./assets/images/PrincessPeachPresenting.png" alt="Princess Peach"></img>
-      <img>
-  </td>
-  <td>
-  <h2>Directions:Try to get as many cupcakes as you can before time runs out!!</h2>
+    </td>
+    <td>
+  <h2>Directions: Try to get as many cupcakes as you can before time runs out!!</h2>
     <h3>
         The goal is to collect as many cupcakes as possible to save Peach's bakery. Peach was delivering goods around the neighborhood one day when it 
         suddenly started raining cupcakes!! 
@@ -46,16 +37,17 @@
     </h3>
   </td>
 </tr>
+<tr>
+    <td></td>
     <td>
-      <img>
-      <a href="game.html"><button onclick = "onBtnClickHandle()";  type="button" >Click here to Begin!</button></a>
-      </img> 
+       <a href="game.html"><button onclick = "onBtnClickHandle()";  type="button" >Click here to Begin!</button></a>
     </td>
+</tr>
   </table>
   </body>
 <!-- JS for Play and Pause Button -->
 <script>
-  var gameIntro = document.getElementById("gameIntro"); 
+  var gameIntro = document.getElementById("gameMessage"); 
 
   function playIntro() { 
     gameIntro.play(); 
